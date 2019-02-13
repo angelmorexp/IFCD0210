@@ -1,0 +1,14 @@
+<!ELEMENT ligapokemon (logo, navegacion, altomando, campeon)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT navegacion (enlace+)>
+<!ELEMENT enlace (#PCDATA)>
+<!ELEMENT altomando (titulo, entrenador+)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT entrenador (nombre, especialidad, equipo)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT especialidad (#PCDATA)>
+<!ELEMENT equipo (titulo, pokemon+)>
+<!ELEMENT pokemon (nombre, nivel, tipo+)>
+<!ELEMENT nivel (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT campeon (titulo, entrenador)>

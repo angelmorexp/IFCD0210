@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Liga Pokemon de Kanto</title>
+	<meta name="author" content="Angel David Morales Exposito"/>
+	<meta name="description" content="Información sobre el Alto Mando y el Campeon de la Liga Pokemon de Kanto"/>
+	<meta name="keywords" contet="Liga Pokemon, Pokemon, Lorelei, Bruno, Agatha, Lance, Azul, Kanto"/>
+	<link type="text/css" rel="stylesheet" href="../css/estilo.css" />
+	<link rel="icon" type="image/png" href="../images/favicon.png" />
+</head>
+<body>
+  <div class="alert" > <!--AVISO DE NAVEGADOR-->
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    Utilice Google Chrome para visualizar correctamente esta página.
+  </div>
+  <ligapokemon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/UF1841%20M1U1/Actividades/E2/xsd/Liga_Pokemon.xsd">
+    <logo>LIGA POKEMON</logo>
+    <navegacion>
+      <a href="index.xhtml"><enlace>Inicio</enlace></a>
+      <a href="https://pokemon.fandom.com/wiki/Pok%C3%A9mon_Wiki"><enlace>Pokemon Wiki</enlace></a>
+      <a href="https://www.pokemon.com/es/"><enlace>Pokemon Oficial</enlace></a>
+      <a class="button" href="#popup1">Contacto</a>
+      <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Formulario de<br/> contacto</h2>
+          <a class="close" href="#">&times;</a>
+          <form class="content" action="../php/enviar.php" method="POST">
+            (*)Campo Obligatorio <br/><br/>
+            <label for="nombre">(*)Nombre</label><br/>
+            <input name="nombre" type="text" required="true" /><br/>
+            <label for="apellidos">(*)Apellidos</label><br/>
+            <input type="text" name="apellidos" required="true"/><br/>
+            <label for="email">(*)Email</label><br/>
+            <input type="text" name="email" required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/><br/>
+            <label for="asunto">(*)Asunto</label><br/>
+            <input type="text" name="asunto" required="true"/><br/>
+            <label for="mensaje">(*)Mensaje</label><br/>
+            <textarea name="mensaje" required="true" rows="3" cols="40"/><br/><br/>
+            <input id="enviar" name="enviar" type="submit" value="Enviar"/>
+          </form>
+        </div>
+      </div>
+    </navegacion>
+    <altomando>
+      <titulo><img class="img1" src="../images/ultraball.png"/> ALTO MANDO <img class="img2" src="../images/ultraball.png" /></titulo>
+      <entrenador id="lorelei">
+        <nombre>Lorelei</nombre>
+        <especialidad><span>HIELO</span></especialidad>
+        <equipo>
+          <titulo>EQUIPO</titulo>
+          <pokemon>
+            <div></div>
+            <nombre>Dewgong</nombre>
+            <nivel>LVL. 54</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Hielo</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Cloyster</nombre>
+            <nivel>LVL. 53</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Hielo</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Slowbro</nombre>
+            <nivel>LVL. 54</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Psiquico</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Jynx</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Hielo</tipo>
+            <tipo>Psiquico</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Lapras</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Hielo</tipo>
+          </pokemon>
+        </equipo>
+      </entrenador>
+      <entrenador id="bruno">
+        <nombre>Bruno</nombre>
+        <especialidad><span>LUCHA</span></especialidad>
+        <equipo>
+          <titulo>EQUIPO</titulo>
+          <pokemon>
+            <div></div>
+            <nombre>Onix</nombre>
+            <nivel>LVL. 53</nivel>
+            <tipo>Roca</tipo>
+            <tipo>Tierra</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Hitmonchan</nombre>
+            <nivel>LVL. 55</nivel>
+            <tipo>Lucha</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Hitmonlee</nombre>
+            <nivel>LVL. 55</nivel>
+            <tipo>Lucha</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Onix</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Roca</tipo>
+            <tipo>Tierra</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Machamp</nombre>
+            <nivel>LVL. 58</nivel>
+            <tipo>Lucha</tipo>
+          </pokemon>
+        </equipo>
+      </entrenador>
+      <entrenador id="agatha">
+        <nombre>Agatha</nombre>
+        <especialidad><span>FANTASMA</span></especialidad>
+        <equipo>
+          <titulo>EQUIPO</titulo>
+          <pokemon>
+            <div></div>
+            <nombre>Gengar</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Fantasma</tipo>
+            <tipo>Veneno</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Golbat</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Veneno</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Haunter</nombre>
+            <nivel>LVL. 55</nivel>
+            <tipo>Fantasma</tipo>
+            <tipo>Veneno</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Arbok</nombre>
+            <nivel>LVL. 58</nivel>
+            <tipo>Veneno</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Gengar</nombre>
+            <nivel>LVL. 60</nivel>
+            <tipo>Fantasma</tipo>
+            <tipo>Veneno</tipo>
+          </pokemon>
+        </equipo>
+      </entrenador>
+      <entrenador id="lance">
+        <nombre>Lance</nombre>
+        <especialidad><span>DRAGON</span></especialidad>
+        <equipo>
+          <titulo>EQUIPO</titulo>
+          <pokemon>
+            <div></div>
+            <nombre>Dragonite</nombre>
+            <nivel>LVL. 62</nivel>
+            <tipo>Dragon</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Dragonair</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Dragon</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Dragonair</nombre>
+            <nivel>LVL. 56</nivel>
+            <tipo>Dragon</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Gyarados</nombre>
+            <nivel>LVL. 58</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Aerodactyl</nombre>
+            <nivel>LVL. 60</nivel>
+            <tipo>Roca</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+        </equipo>
+      </entrenador>
+    </altomando>
+    <campeon>
+      <titulo><img class="img1" src="../images/ultraball.png" />CAMPEON<img class="img2" src="../images/ultraball.png" /></titulo>
+      <entrenador id="rival">
+        <nombre>Azul</nombre>
+        <especialidad><span>VARIOS</span></especialidad>
+        <equipo>
+          <titulo>EQUIPO</titulo>
+          <pokemon>
+            <div></div>
+            <nombre>Pidgeot</nombre>
+            <nivel>LVL. 62</nivel>
+            <tipo>Normal</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Gyarados</nombre>
+            <nivel>LVL. 63</nivel>
+            <tipo>Agua</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Alakazam</nombre>
+            <nivel>LVL. 59</nivel>
+            <tipo>Psiquico</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Exeggutor</nombre>
+            <nivel>LVL. 61</nivel>
+            <tipo>Planta</tipo>
+            <tipo>Psiquico</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Rhydon</nombre>
+            <nivel>LVL. 61</nivel>
+            <tipo>Tierra</tipo>
+            <tipo>Roca</tipo>
+          </pokemon>
+          <pokemon>
+            <div></div>
+            <nombre>Charizard</nombre>
+            <nivel>LVL. 65</nivel>
+            <tipo>Fuego</tipo>
+            <tipo>Volador</tipo>
+          </pokemon>
+        </equipo>
+      </entrenador>
+    </campeon>
+  </ligapokemon>
+  <footer><p>Copyright © Todos los Derechos Reservados.</p></footer>
+</body>
+</html>
