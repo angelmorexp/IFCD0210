@@ -1,0 +1,109 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	overflow:hidden;
+}
+audio {
+	display: none;
+	position: absolute;
+}
+#cielo {
+	height:100vh;
+	width:100vw;
+	background: url(../images/cielo.png) repeat-x;
+	background-size: contain;
+	position: absolute;
+	top:0;
+	left:0;
+}
+#nubes {
+	height:100vh;
+	width:100vw;
+	background: url(../images/nubes.png) repeat-x;
+	background-size: contain;
+	position: absolute;
+	top:0;
+	left:0;
+	animation: bgright 60s infinite;
+}
+#suelo {
+	height:100vh;
+	width:100vw;
+	background: url(../images/suelo.png) repeat-x;
+	background-size: contain;
+	position: absolute;
+	top:0;
+	left:0;
+}
+#pokemon {
+	position: absolute;
+	height:128px;
+	width: 128px;
+	background: url(../sprite/bulbasaur.png);
+	background-position: 0px 0px;
+	background-size:512px 256px;
+	top: 450px;
+	left: 600px;
+}
+#humo {
+	position: absolute;
+	background-image:url(../sprite/smoke.png);
+	height:128px;
+	width: 128px;
+	background-position: 0px 0px;
+	background-size:1408px 128px;
+}
+
+@keyframes bgright {
+	0% {background-position:1600px;}
+	100% {background-position:0px;}
+}
+@keyframes bgleft {
+	0% {background-position:-1600px;}
+	100% {background-position:0px;}
+}
+@keyframes walkleft{
+	0% {background-position:0px 0px;}
+	100%{background-position:512px 0px;}
+}
+@keyframes walkright{
+	0% {background-position:0px 128px;}
+	100%{background-position:512px 128px;}
+}
+@keyframes jump{
+	0% {top:450px;}
+	50% {top:350px;}
+	100%{top:450px;}
+}
+@keyframes explosion{
+	0% {background-position:0px;}
+	100%{background-position:-1408px;}
+}
+button, input {
+	margin:5px;
+	position: relative;
+	z-index:30;
+}
+#hooh {
+	position: absolute;
+	height:256px;
+	width: 256px;
+	top: 0px;
+	left: -400px;
+	background-image: url(../sprite/ho-oh.png);
+	background-position: 0px 0px;
+	background-size:512px 256px;
+	animation: animationh 0.5s steps(2) infinite, moveh 30s infinite 10s ;
+}
+@keyframes animationh{
+	0% {background-position:0px 0px;}
+	100%{background-position:-512px  5px;}
+}
+@keyframes moveh{
+	0% {top:-100px;left: -400px;}
+	15%{top:100px}
+	30%{top:-100px}
+	50%{top:100px;}
+	100%{top:-100px;left: 5000px;}
+}
