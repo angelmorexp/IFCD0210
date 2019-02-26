@@ -16,10 +16,11 @@ function init(){														//INICIAR VARIABLES
 		objImage.addEventListener("webkitAnimationEnd", reset_salto);	//RESET ANIMACION SALTO
 
 		var musica=document.getElementById("musica");					//VARIABLE MUSICA DE FONDO
+		setTimeout("reproducir()", 3000);								
 
-		var pokeball = document.getElementById('pokeball');				//VARIABLE SONIDO POKEBALL
+		var pokeball = document.getElementById('pokeball');				//VARIABLE SONIDO POKEBALL				
 		pokeball.playbackRate= 2.5;
-		pokeball.volume=0.3;
+		pokeball.volume=0.1;
 
 		document.getElementById("slider").value=100;					//ASIGNAR VALOR MAXIMO AL SLIDER DEL VOLUMEN
 

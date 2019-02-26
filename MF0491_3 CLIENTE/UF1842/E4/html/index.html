@@ -15,16 +15,18 @@
 	</script>
 </head>
 <body onkeydown='getKeyAndMove(event)'>
-	<audio id="musica" src="../audio/pokemon.mp3" controls></audio>
-	<audio id="pokeball" src="../audio/pokeball.mp3" controls></audio>
+	<audio id="musica" src="../audio/pokemon.mp3"></audio>
+	<audio id="pokeball" src="../audio/pokeball.mp3" ></audio>
 	<div id="botones">
 		<button onclick="changeBulbasaur()">Bulbasaur</button>
 		<button onclick="changeCharmander()">Charmander</button>
 		<button onclick="changeSquirtle()">Squirtle</button>
 		<button onclick="changePidgeot()">Pidgeot</button>
-		<button onclick="reproducir()">Play</button>
-		<button onclick="parar()">Pause</button>
-		<input id="slider" type="range" min="0" max="100" step="1" onclick="setvolume()"></input>
+		<div id="reproductor">
+			<button onclick="reproducir()">Play</button>
+			<button onclick="parar()">Pause</button>
+			<input id="slider" type="range" min="0" max="100" step="1" onclick="setvolume()"></input>
+		</div>
 	</div>
 	<div id="cielo"></div>
 	<div id="nubes"></div>

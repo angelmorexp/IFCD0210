@@ -8,6 +8,20 @@ audio {
 	display: none;
 	position: absolute;
 }
+#botones {
+	background: black;
+	z-index: 20;
+	position: relative;
+
+}
+#reproductor {
+	float: right;
+	position: relative;
+	top:-5px;
+}
+#slider {
+	top:5px;
+}
 #cielo {
 	height:100vh;
 	width:100vw;
