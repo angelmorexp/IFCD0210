@@ -1,0 +1,111 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+canvas {
+	background-image: linear-gradient(white, darkgrey, grey);
+	border: 1px solid black;
+	position: absolute;
+}
+#reproductor {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 0 20px;
+	position: relative;
+}
+#slider {
+	position: relative;
+	top: 5px;
+}
+iframe {
+	margin: 0;
+}
+h1 {
+	position: absolute;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	padding:10px;
+	border: 2px solid black;
+	background: white;
+	font-variant: small-caps;
+}
+h2 {
+	text-align: center;
+	font-variant: small-caps;
+	border-bottom: 2px solid black;
+	margin: 0;
+	background: black;
+	color: white;
+}
+h3 {
+	margin: 0;
+	text-align: center;
+	background: white;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}
+#bloqCal , #bloqGal, #bloqAud {
+	position: relative;
+	float: left;
+	margin: 10px 70px ;
+	top: 100px;
+	border: 2px solid black;
+	height: 506px;
+	width: 300px;
+	background: darkgrey;
+}
+
+input[type="button"]:hover{
+	background-color:slategray;
+	cursor: pointer;
+}
+input[type="button"].arit{
+	background-color:black;
+}
+input[type="button"].igual{
+	background-color: black;
+}
+input[type="button"].clear{
+	background-color:black;
+}
+form{
+	background-color:white;
+}
+input[type="text"]{
+	background-color:black;
+	border:0px;
+	width:250px;
+	height: 40px;
+	font-size: 20px;
+	color: white;
+	text-align: right;
+	pointer-events: none;
+}
+input[name="txtcaja1"]{
+	height: 20px;
+	font-size: 16px;
+}
+input[name="txtcaja2"]{
+	margin-bottom: 5px;
+	font-size: 26px;
+}
+input[type="button"]{
+	font-size: 18px;
+	font-weight:lighter;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	width:60px;border:0px;
+	height: 60px;
+	color: white;
+	background-color:grey;
+	margin-bottom: 5px;
+}
+
+img {
+	margin-top: 12px;
+	border-top: 3px solid black;
+	border-bottom: 3px solid black;
+	width: inherit;
+	height: 135px;
+	z-index: 4;
+}

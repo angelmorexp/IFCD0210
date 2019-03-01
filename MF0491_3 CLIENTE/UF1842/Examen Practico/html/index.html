@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Examen Práctico UF1842</title>
+	<meta name="author" content="Ángel David Morales Expósito"/>
+	<script src="../js/index.js"></script>							<!--DIRECCIÓN DEL JAVASCRIPT QUE SE VA A UTILIZAR-->
+	<link rel="stylesheet" type="text/css" href="../css/estilo.css">	<!--DIRECCIÓN DEL CSS QUE SE VA A UTILIZAR-->
+	<link rel="icon" type="image/png" href="../images/favicon.png" />
+</head>
+<body onload="startGame()">										<!--EJECUTA LA FUNCION AL CARGAR LA PÁGINA Y CREA UN AREA DE JUEGO-->	
+	<h1>Examen Práctico UF1842</h1>	
+	<div id="bloqCal">
+		<h2>Calculadora</h2>
+		<center>
+			<form name="f1"><br>
+				<input type="text" name="txtcaja1">
+				<br>
+				<input type="text" name="txtcaja2" value="0">
+				<br>
+				<input type="button" class="arit" onClick="arit('%')" value="%">
+				<input type="button" onClick="raiz()" value="√">
+				<input type="button" onClick="escribir('7')" value="x²">
+				<input type="button" onClick="escribir('7')" value="¹/×">
+				<br>
+				<input type="button" class="clear" onClick="document.f1.txtcaja2.value='0'" value="CE">
+				<input type="button" class="clear" onClick="document.f1.reset(); blocdel = false;" value="C">
+				<input type="button" class="clear" onClick="deletecarac()" value="◄">
+ 
+				<input type="button" class="arit" onClick="arit('/')" value="÷">
+				<br>
+				<input type="button" onclick="escribir(this.value)" value="7">
+				<input type="button" onclick="escribir(this.value)" value="8">
+				<input type="button" onclick="escribir(this.value)" value="9">
+				<input type="button" class="arit" onClick="arit('*')" value="×">
+				<br>
+				<input type="button" onclick="escribir(this.value)" value="4">
+				<input type="button" onclick="escribir(this.value)" value="5">
+				<input type="button" onclick="escribir(this.value)" value="6">
+				<input type="button" class="arit" onClick="arit('-')" value="-">
+				<br>
+				<input type="button" onclick="escribir(this.value)" value="1">
+				<input type="button" onclick="escribir(this.value)" value="2">
+				<input type="button" onclick="escribir(this.value)" value="3">
+				<input type="button" class="arit" onClick="arit('+')" value="+">
+				<br>
+				<input type="button" class="arit" onClick="masmenos()" value="±">
+				<input type="button" onclick="escribir(this.value)" value="0">
+				<input type="button" onClick="escribir('.')" value=".">
+				<input type="button" class="igual" onClick="calcular()" value="=">
+				<br>
+			</form>
+		</center>
+	</div>
+	<div id="bloqAud">
+		<h2>Audio/Video</h2>
+		<h3>Audio</h3>
+		<div id="reproductor">
+			<audio id="musica" src="../audio/Debussy.mp3" loop autoplay></audio>
+			<button onclick="reproducir()">Play</button>
+			<button onclick="parar()">Pause</button>
+			<input id="slider" type="range" min="0" max="100" step="1" onclick="setvolume()"></input>
+		</div>
+		<h3>Video</h3>
+		<iframe width="300" height="356" src="https://www.youtube.com/embed/TVDREzBijRI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<div id="bloqGal">
+		<h2>Galería</h2>
+		<img title="Formato .JPG" id="pic" onmouseover ="ampliar(this)" onmouseout="reducir(this)" src="../images/1.jpg" alt="Mancha en Blanco y Negro">
+		<img title="Formato .PNG" onmouseover ="ampliar(this)" onmouseout="reducir(this)" src="../images/2.png" alt="Mapamundi en Blanco y Negro">
+		<img title="Formato .GIF" onmouseover ="ampliar(this)" onmouseout="reducir(this)" src="../images/3.gif" alt="Movimiento del Agua en Blanco y Negro">
+	</div>
+</body>
+</html>
