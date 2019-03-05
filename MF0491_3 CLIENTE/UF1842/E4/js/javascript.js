@@ -62,7 +62,7 @@ function init(){														//INICIAR VARIABLES
 			objImage.style.left= 1200+'px';								//EVITAR QUE SE SALGA DE LA PANTALLA
 		}
 		objImage.style.backgroundPosition= '0px 0px';
-		objImage.style.animation= 'walkleft 1s steps(4) infinite';
+		objImage.style.animation= 'walkleft 0.5s steps(4) infinite';
 		fondo1.style.backgroundPosition= parseInt(fondo1.style.backgroundPosition)+2.5 +'px';
 	}
 	function runLeft(){													//CORRER IZQUIERDA
