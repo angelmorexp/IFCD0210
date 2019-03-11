@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<sistema_solar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/pc/Desktop/Examen%20Practico/xsd/Sistema_Solar.xsd">
+  <cabecera>Sistema Solar</cabecera>
+  
+  <menu1>
+    <botonM>Mercurio</botonM>
+    <botonM>Venus</botonM>
+    <botonM>Tierra</botonM>
+    <botonM>Marte</botonM>
+    <botonM>Jupiter</botonM>
+    <botonM>Saturno</botonM>
+    <botonM>Urano</botonM>
+    <botonM>Neptuno</botonM>
+  </menu1>
+  
+  <menu2>
+    <enlaceP>Mercurio</enlaceP>
+    <enlaceP>Venus</enlaceP>
+    <enlaceP>Tierra</enlaceP>
+    <enlaceP>Marte</enlaceP>
+    <enlaceP>Jupiter</enlaceP>
+    <enlaceP>Saturno</enlaceP>
+    <enlaceP>Urano</enlaceP>
+    <enlaceP>Neptuno</enlaceP>
+  </menu2>
+  
+  <mercurio>
+    <imagen></imagen>
+    <nombre>Mercurio</nombre>
+    <año>Edad Antigua</año>
+    <masa>3,302×10^23 kg</masa>
+    <diametro>4879,4 km</diametro>
+    <temperatura>166 °C</temperatura>
+    <atmosfera>Sin atmosfera</atmosfera>
+    <satelites>
+      <satelite>Sin satelites</satelite>
+      </satelites>
+  </mercurio>
+  
+  <venus>
+    <imagen></imagen>
+    <nombre>Venus</nombre>
+    <año>Edad Antigua</año>
+    <masa>4,869 × 10^24 kg</masa>
+    <diametro>12 103,6 km</diametro>
+    <temperatura>463,85 °C</temperatura>
+    <atmosfera>Dioxido de carbono</atmosfera>
+    <satelites>
+    <satelite>Sin satelites</satelite>
+    </satelites>
+  </venus>
+  
+  <tierra>
+    <imagen></imagen>
+    <nombre>Tierra</nombre>
+    <año></año>
+    <masa>5,9736×10^24 kg</masa>
+    <diametro>12 742 km</diametro>
+    <temperatura>14,05 °C</temperatura>
+    <atmosfera>Nitrogeno y Oxigeno</atmosfera>
+    <satelites>
+      <satelite>Luna</satelite>
+    </satelites>
+  </tierra>
+  
+  <marte>
+    <imagen></imagen>
+    <nombre>Marte</nombre>
+    <año>Edad Antigua</año>
+    <masa>6,4185 × 10^23 kg</masa>
+    <diametro>6794,4 km</diametro>
+    <temperatura>-46 °C</temperatura>
+    <atmosfera>Dioxido de carbono</atmosfera>
+    <satelites>
+      <satelite>Fobos</satelite>
+      <satelite>Deimos</satelite>
+    </satelites>
+  </marte>
+  
+  <jupiter>
+    <imagen></imagen>
+    <nombre>Jupiter</nombre>
+    <año>Edad Antigua</año>
+    <masa>1,899×10^27 kg</masa>
+    <diametro>142 984 km</diametro>
+    <temperatura>-121,15 °C</temperatura>
+    <atmosfera>Hidrogeno y Helio</atmosfera>
+    <satelites>
+      <satelite>Io</satelite>
+      <satelite>Europa</satelite>
+      <satelite>Ganimedes</satelite>
+      <satelite>Calisto</satelite>
+    </satelites>
+</jupiter>
+
+<saturno>
+    <imagen></imagen>
+    <nombre>Saturno</nombre>
+    <año>Edad Antigua</año>
+    <masa>5,688·10^26 kg</masa>
+    <diametro>120 536 km</diametro>
+    <temperatura>-130,15 °C</temperatura>
+    <atmosfera>Hidrogeno y Helio</atmosfera>
+    <satelites>
+      <satelite>Mimas</satelite>
+      <satelite>Encélado</satelite>
+      <satelite>Tetis</satelite>
+      <satelite>Dione</satelite>
+      <satelite>Rea</satelite>
+      <satelite>Titan</satelite>
+      <satelite>Hiperion</satelite>
+      <satelite>Jápeto</satelite>
+      <satelite>Febe</satelite>
+    </satelites>
+  </saturno>
+  
+  <urano>
+    <imagen></imagen>
+    <nombre>Urano</nombre>
+    <año>1781</año>
+    <masa>8,686×10^25 kg </masa>
+    <diametro>51.118 km</diametro>
+    <temperatura>-205,2 ºC</temperatura>
+    <atmosfera>Hidrogeno y Helio</atmosfera>
+    <satelites>
+      <satelite>Titania</satelite>
+      <satelite>Oberón</satelite>
+      <satelite>Umbriel</satelite>
+      <satelite>Ariel</satelite>
+      <satelite>Miranda</satelite>
+    </satelites>
+  </urano>
+
+<neptuno>
+    <imagen></imagen>
+    <nombre>Neptuno</nombre>
+    <año>1846</año>
+    <masa>1,024×10^26 kg3​</masa>
+    <diametro>49.572 km</diametro>
+    <temperatura>-220 °C</temperatura>
+    <atmosfera>Hidrogeno y Helio</atmosfera>
+    <satelites>
+      <satelite>Triton</satelite>
+      <satelite>Nereida</satelite>
+    </satelites>
+  </neptuno>
+
+</sistema_solar>

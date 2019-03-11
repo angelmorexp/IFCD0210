@@ -1,0 +1,251 @@
+@font-face { font-family: Solar; src: url(../fonts/solar_regular.otf); }
+@font-face { font-family: Solar_bold; src: url(../fonts/solar_bold.otf); }
+
+/* General */
+
+html {
+	scroll-behavior: smooth;
+}			
+
+body {
+	width: 100%;
+	margin: 0;
+	font-size: 16px;
+					
+  	/*overflow: hidden;*/
+  	background: black;
+}
+
+/*FIN GENERAL*/
+
+/*PAGINAS TAMAÑO*/
+
+.child {
+	display: block;
+	height: 100vh;
+}
+
+/*FIN PAGINAS TAMAÑO*/
+
+/*PAGINA PRINCIPAL*/
+
+#sol {
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	top: 400px;
+	left: 250px;
+	background-image: url("http://pluspng.com/img-png/png-hd-sun-with-sunglasses-sun-hd-sun-hd-png-png-hd-picture-of-sun-824.png");
+	z-index:4;
+}
+
+
+@keyframes move-background {
+  	from {-webkit-transform: translate3d(0px, 0px, 0px);}
+	to { -webkit-transform: translate3d(1000px, 0px, 0px);}
+}
+
+.background-container{
+	height:106vh;
+	position: relative;
+	overflow: hidden;
+	top: -200px;
+	clear:both;
+}
+.stars {
+ 	background: black url(../images/stars.png) repeat;
+  	height: 500vh;
+  	width: 500vh;
+ 	position: absolute;
+ 	top:-150vh;
+ 	left:-150vh;
+	display: block;
+  	z-index: -2;
+}
+
+.twinkling{
+	width:100%;
+	height: 100%;
+	background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat-x;
+	background-size: 100vh 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    animation:move-background 20s linear infinite;
+}
+.stars {
+  	animation: spin 200s linear infinite;
+}
+@keyframes spin {
+   	0% {transform: rotate(0deg);}
+   	100% {transform: rotate(360deg);}
+}
+
+cabecera{
+	
+	display: block;
+	font-size: 80px;
+	padding-top: 30px;
+	text-align: center;
+	font-family: Solar_bold;
+	z-index: 10;
+	color:white;
+}
+
+menu1 {
+	display:block;
+	text-align: center;
+	font-family: Solar;
+	font-size: 50px;
+	position: sticky;
+	top: 0px;
+	left: 60px;
+	float: left;
+	z-index: 11;
+	background: rgba(0,0,0,0.5);
+	border-bottom: 2px solid white;
+}
+menu1 a{
+	text-decoration: none;
+	color: white;
+}
+menu1 a:hover {
+	color: grey;
+}
+/*COLOCACION PLANETAS*/
+menu2 a img {
+	height: 100%;
+	margin: 0;
+
+}
+menu2 a:hover {
+	height: 120px;
+}
+menu2 a {
+	display: block;
+	color: white;
+	position: absolute;
+	height: 100px;
+}
+
+menu2 :nth-child(1) {
+	top: 520px;
+	left: 7%;
+}
+menu2 :nth-child(8) {
+	top: 500px;
+	right: 10%;
+}
+menu2 :nth-child(2) {
+	top: 400px;
+	left: 15%;
+}
+menu2 :nth-child(7) {
+	top: 420px;
+	right:20%;
+}
+menu2 :nth-child(3) {
+	top: 350px;
+	left: 25%;
+}
+menu2 :nth-child(6) {
+	top: 340px;
+	right:30%;
+}
+menu2 :nth-child(4) {
+	top: 300px;
+	left: 37%;
+}
+menu2 :nth-child(5){
+	top: 300px;
+	right: 45%;
+}
+
+/*PLANETAS*/
+#ven3 ,  #mar3 , #sat3 , #nep3, #mer3 , #tie3, #jup3 , #ura3{
+	background-size: cover;
+	margin: 0;
+	color: white;
+	text-align: center;
+	/*font-size: 20px;*/
+}
+#ven3 , #jup3 {
+	background-image: url(../images/fondo.jpg);
+}
+#mer3 , #sat3 {
+	background-image: url(../images/fondo2.png);
+}
+#tie3 , #ura3 {
+	background-image: url(../images/fondo3.png);
+}
+#mar3 , #nep3 {
+	background-image: url(../images/fondo4.jpg);
+}
+#mer3 img , #ven3 img , #tie3 img , #mar3 img , #jup3 img , #sat3 img , #ura3 img , #nep3 img  {
+	display: inline-block;
+	height: 200px;
+	padding-top: 80px;
+}
+nombre , año, masa , diametro, temperatura , atmosfera , satelite {
+	display: block;
+	font-variant: small-caps;
+	margin: 3px;
+	border-radius: 20px;
+}
+satelites {
+	font-variant: small-caps;
+}
+satelite {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+.datos {
+	border: 3px solid black;
+	background: rgba( 0 , 0 , 0, 0.5);
+	margin:auto;
+	margin-bottom: 0;
+	width: 50vw;
+}
+nombre {
+	/*font-size: 40px;*/
+	border: none;
+	border-bottom: 1px solid white;
+	margin-bottom: 5px;
+}
+/*FOOTER*/
+footer {
+	width:100%;
+	display: block;
+	background: rgba(0,0,0,0.8);
+	position: fixed;
+	font-variant: small-caps;
+	color: white;
+	bottom: 0;
+	text-align: center;
+	border-top: 2px solid white;
+	z-index: 5;
+}
+footer p {
+	margin:0;
+	font-size: 20px;
+}
+input, select {
+	margin-top: 5px;
+	color: white;
+	background: none;
+	margin-right:10px; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+select {
+	border: 2px solid white;
+}
+.escondido {
+	display: none;
+}
+
+option {
+	background: rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,23 @@
+<!ELEMENT sistema_solar (cabecera, menu1, menu2, mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno)>
+<!ELEMENT cabecera (#PCDATA)>
+<!ELEMENT menu1 (botonM+)>
+<!ELEMENT botonM (#PCDATA)>
+<!ELEMENT menu2 (enlaceP+)>
+<!ELEMENT enlaceP (#PCDATA)>
+<!ELEMENT mercurio (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT año (#PCDATA)>
+<!ELEMENT masa (#PCDATA)>
+<!ELEMENT diametro (#PCDATA)>
+<!ELEMENT temperatura (#PCDATA)>
+<!ELEMENT atmosfera (#PCDATA)>
+<!ELEMENT satelites (satelite*)>
+<!ELEMENT venus (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT tierra (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT satelite (#PCDATA)>
+<!ELEMENT marte (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT jupiter (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT saturno (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT urano (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
+<!ELEMENT neptuno (imagen, nombre, año, masa, diametro, temperatura, atmosfera, satelites)>
