@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Sistema Solar</title>
+		<meta name="author" content="Angel David Morales Exposito"/>
+		<meta name="description" content="Información sobre el Sistema Solar"/>
+		<meta name="keywords" content="Sistema Solar, Planetas, Satelites"/>
+		<link type="text/css" rel="stylesheet" href="../css/estilo.css" />
+		<link rel="icon" type="image/png" href="../images/favicon.png" />
+		<script type="text/javascript"  src="../js/javascript.js"></script>
+		<script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	</head>
+	<body id="body">
+		<script type="text/javascript">
+			var z = 0;
+			var multi = 1;
+			var s= 0;
+		</script>
+		
+		<sistema_solar  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/pc/Desktop/Examen%20Practico/xsd/Sistema_Solar.xsd">
+			<h1>
+				<cabecera>
+					<a id="pri1"></a>
+					Sistema Solar
+				</cabecera>
+			</h1>
+			<div id="accesibilidad">
+				<label for="leerTodo">Leer toda la página</label>
+				<input class="sonido" name="leerTodo" type="button" onclick="leerTodo()" value="►"/>
+				<label for="leerSeleccion">Activar/Desactivar lectura automática de la selección</label>
+				<input class="sonido" id="activo"  name="leerSeleccion" type="button" onclick="leerSeleccion(s)"/>
+			</div>
+			
+			<menu1>
+				<a  href="#pri1">Principal</a>
+				<a id="mer1" href="#mer2"><botonM class="cambio">Mercurio</botonM></a>
+				<a id="ven1" href="#ven2"><botonM class="cambio">Venus</botonM></a>
+				<a id="tie1" href="#tie2"><botonM class="cambio">Tierra</botonM></a>
+				<a id="mar1" href="#mar2"><botonM class="cambio">Marte</botonM></a>
+				<a id="jup1" href="#jup2"><botonM class="cambio">Jupiter</botonM></a>
+				<a id="sat1" href="#sat2"><botonM class="cambio">Saturno</botonM></a>
+				<a id="ura1" href="#ura2"><botonM class="cambio">Urano</botonM></a>
+				<a id="nep1" href="#nep2"><botonM class="cambio">Neptuno</botonM></a>
+			</menu1>
+			<div class="child background-container" id="principal">
+				<div class="stars"></div>
+				<div class="twinkling"></div>
+
+				<div>
+					<menu2>
+						<a href="#mer2"><enlaceP><img title="Mercurio" alt="Imagen de Mercurio" id="mer" src="../images/mercurio.png"/></enlaceP></a>
+						<a href="#ven2"><enlaceP><img title="Venus" alt="Imagen de Venus" id="ven" src="../images/venus.png"/><br/></enlaceP></a>
+						<a href="#tie2"><enlaceP><img title="La Tierra" alt="Imagen de la Tierra" id="tie" src="../images/tierra.png"/><br/></enlaceP></a>
+						<a href="#mar2"><enlaceP><img title="Marte" alt="Imagen de Marte" id="mar" src="../images/marte.png"/><br/></enlaceP></a>
+						<a href="#jup2"><enlaceP><img title="Jupiter" alt="Imagen de Jupiter" id="jup" src="../images/jupiter.png"/><br/></enlaceP></a>
+						<a href="#sat2"><enlaceP><img title="Saturno" alt="Imagen de Saturno" id="sat" src="../images/saturno.png"/><br/></enlaceP></a>
+						<a href="#ura2"><enlaceP><img title="Urano" alt="Imagen de Urano" id="ura" src="../images/urano.png"/><br/></enlaceP></a>
+						<a href="#nep2"><enlaceP><img title="Neptuno" alt="Imagen de Neptuno" id="nep" src="../images/neptuno.png"/><br/></enlaceP></a>
+					</menu2>
+				</div>
+				<div id="sol"></div>
+			</div>
+			<mercurio id="mer3" class="child">
+				<a id="mer2"><imagen><img alt="Imagen de Mercurio" src="../images/mercurio.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Mercurio</nombre>
+					<año>Descubierto en: Edad Antigua</año>
+					<masa>Masa: 3,302×10^23 kg</masa>
+					<diametro>Diametro: 4879,4 km</diametro>
+					<temperatura>Temperatura Media: 166 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Sin atmosfera</atmosfera>
+					<satelites>
+						<satelite>Sin satelites</satelite>
+					</satelites>
+				</div>
+			</mercurio>
+
+			<venus id="ven3" class="child">
+				<a id="ven2"><imagen><img alt="Imagen de Venus" src="../images/venus.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Venus</nombre>
+					<año>Descubierto en: Edad Antigua</año>
+					<masa>Masa: 4,869 × 10^24 kg</masa>
+					<diametro>Diametro: 12 103,6 km</diametro>
+					<temperatura>Temperatura Media463,85 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Dioxido de carbono</atmosfera>
+					<satelites>
+						<satelite>Sin satelites</satelite>
+					</satelites>
+				</div >
+			</venus>
+
+			<tierra id="tie3" class="child">
+				<a id="tie2"><imagen><img alt="Imagen de la Tierra" src="../images/tierra.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Tierra</nombre>
+					<año></año>
+					<masa>Masa: 5,9736×10^24 kg</masa>
+					<diametro>Diametro: 12 742 km</diametro>
+					<temperatura>Temperatura Media: 14,05 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Nitrogeno y Oxigeno</atmosfera>
+					<satelites><p>Satelites </p>
+						<satelite>Luna</satelite>
+					</satelites>
+				</div>
+			</tierra>
+
+			<marte id="mar3" class="child">
+				<a id="mar2"><imagen><img alt="Imagen de Marte" src="../images/marte.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Marte</nombre>
+					<año>Descubierto en: Edad Antigua</año>
+					<masa>Masa: 6,4185 × 10^23 kg</masa>
+					<diametro>Diametro: 6794,4 km</diametro>
+					<temperatura>Temperatura Media: -46 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Dioxido de carbono</atmosfera>
+					<satelites><p>Satelites</p>
+						<satelite>Fobos</satelite>
+						<satelite>Deimos</satelite>
+					</satelites>
+				</div>
+			</marte>
+
+			<jupiter id="jup3" class="child">
+				<a id="jup2"><imagen><img alt="Imagen de Jupiter" src="../images/jupiter.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Jupiter</nombre>
+					<año>Descubierto en: Edad Antigua</año>
+					<masa>Masa: 1,899×10^27 kg</masa>
+					<diametro>Diametro: 142 984 km</diametro>
+					<temperatura>Temperatura Media:-121,15 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Hidrogeno y Helio</atmosfera>
+					<satelites><p>Satelites </p>
+						<satelite>Io</satelite>
+						<satelite>Europa</satelite>
+						<satelite>Ganimedes</satelite>
+						<satelite>Calisto</satelite>
+					</satelites>
+				</div>
+			</jupiter>
+
+			<saturno id="sat3" class="child">
+				<a id="sat2"><imagen><img alt="Imagen de Saturno" src="../images/saturno.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Saturno</nombre>
+					<año>Descubierto en: Edad Antigua</año>
+					<masa>Masa: 5,688·10^26 kg</masa>
+					<diametro>Diametro: 120 536 km</diametro>
+					<temperatura>Temperatura Media: -130,15 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Hidrogeno y Helio</atmosfera>
+					<satelites><p>Satelites </p>
+						<satelite>Mimas</satelite>
+						<satelite>Encélado</satelite>
+						<satelite>Tetis</satelite>
+						<satelite>Dione</satelite>
+						<satelite>Rea</satelite>
+						<satelite>Titan</satelite>
+						<satelite>Hiperion</satelite>
+						<satelite>Jápeto</satelite>
+						<satelite>Febe</satelite>
+					</satelites>
+				</div>
+			</saturno>
+
+			<urano id="ura3" class="child">
+				<a id="ura2"><imagen><img alt="Imagen de Urano" src="../images/urano.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Urano</nombre>
+					<año>Descubierto en: 1781</año>
+					<masa>Masa: 8,686×10^25 kg </masa>
+					<diametro>Diametro: 51.118 km</diametro>
+					<temperatura>Temperatura: -205,2 ºC</temperatura>
+					<atmosfera>Gases de la atmosfera: Hidrogeno y Helio</atmosfera>
+					<satelites><p>Satelites </p>
+						<satelite>Titania</satelite>
+						<satelite>Oberón</satelite>
+						<satelite>Umbriel</satelite>
+						<satelite>Ariel</satelite>
+						<satelite>Miranda</satelite>
+					</satelites>
+				</div>
+			</urano>
+
+			<neptuno id="nep3" class="child">
+				<a id="nep2"><imagen><img alt="Imagen de Neptuno" src="../images/neptuno.png"/></imagen></a>
+				<div class="datos">
+					<nombre>Neptuno</nombre>
+					<año>Descubierto en: 1846</año>
+					<masa>Masa: 1,024×10^26 kg3​</masa>
+					<diametro>Diametro: 49.572 km</diametro>
+					<temperatura>Temperatura Media: -220 °C</temperatura>
+					<atmosfera>Gases de la atmosfera: Hidrogeno y Helio</atmosfera>
+					<satelites><p>Satelites</p> 
+						<satelite>Triton</satelite>
+						<satelite>Nereida</satelite>
+					</satelites>
+				</div>
+				<footer>
+					<select id="colorFuente" onclick="colorFuen()">
+						<option class="escondido" value="Color Fuente">Color Fuente</option>
+  						<option value="red">Rojo</option>
+  						<option value="blue">Azul</option>
+ 	 					<option value="yellow">Amarillo</option>
+  						<option value="black">Negro</option>
+  						<option value="white">Blanco</option>
+					</select>
+					<select id="colorFondo" onclick="colorFond()">
+						<option class="escondido" value="Color Fondo" >Color Fondo</option>
+  						<option value="red">Rojo</option>
+  						<option value="blue">Azul</option>
+ 	 					<option value="yellow">Amarillo</option>
+  						<option value="black">Negro</option>
+  						<option value="white">Blanco</option>
+					</select>
+					<input id="bot1" type="button" value="Negro/Amarillo-Predefinido" onclick="cambiarColores(z)"></input>
+					<input id="bot2" type="button" value="Aumentar Tamaño Fuente" onclick="aumTam(multi)"></input>
+					<input id="bot3" type="button" value="Disminuir Tamaño Fuente" onclick="disTam(multi)"></input>
+					<p>Página realizada por Ángel David Morales Expósito</p>
+				</footer>
+			</neptuno>
+		</sistema_solar>
+		<script> 
+			$(document).ready(function (){ 
+   				$(document).mouseup(function (e){
+      				setTimeout(function() { 
+         				responsiveVoice.cancel();
+         				if (s%2==0){
+         					responsiveVoice.speak(getSelectionText(), "Spanish Female");
+         					document.getElementById('activo').style.background= 'green';
+         				}
+         				else {
+         					document.getElementById('activo').style.background= 'red';
+         				}  
+      				}, 1);
+   				});
+			});
+		</script>
+	</body>
+</html>

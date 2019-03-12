@@ -1,0 +1,183 @@
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sistema_solar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="cabecera"/>
+        <xs:element name="menu1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="botonM" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="menu2">
+          <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+              <xs:element type="xs:string" name="enlaceP"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mercurio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="venus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tierra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="marte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jupiter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="saturno">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:string" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="urano">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:short" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="neptuno">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="imagen"/>
+              <xs:element type="xs:string" name="nombre"/>
+              <xs:element type="xs:short" name="año"/>
+              <xs:element type="xs:string" name="masa"/>
+              <xs:element type="xs:string" name="diametro"/>
+              <xs:element type="xs:string" name="temperatura"/>
+              <xs:element type="xs:string" name="atmosfera"/>
+              <xs:element name="satelites">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="satelite" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
