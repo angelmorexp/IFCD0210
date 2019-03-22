@@ -155,12 +155,14 @@ public class Formulario extends JFrame {
 		textArea.setBounds(279, 51, 238, 156);
 		contentPane.add(textArea);
 		
+		int [] contador= {1};
+		
 		JButton btnEnviar = new JButton("ENVIAR");
 		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnEnviar.setBackground(new Color(219, 112, 147));
 		btnEnviar.setForeground(new Color(255, 240, 245));
 		btnEnviar.addActionListener(new ActionListener(){
-			   public void actionPerformed(ActionEvent arg0){
+			public void actionPerformed(ActionEvent arg0){
 				   String nombre= textField_2.getText();
 				   String apellido= textField_3.getText();
 				   Integer edad= (Integer)spinner.getValue();
@@ -189,15 +191,20 @@ public class Formulario extends JFrame {
 					String mensaje= " Nombre: "+nombre+"\n Apellidos: "+apellido+"\n Edad: "+edad+"\n Genero: "+genero+"\n Ocupación: "+ocupacion+"\n Otros datos: "+datos;
 					JOptionPane.showMessageDialog(null, mensaje ); //MOSTRAR LOS DATOS DEL FORMULARIO
 					PrintWriter writer = null;
+					
 					try {
-						writer = new PrintWriter("usuario.txt", "UTF-8");				//CREAR UN ARCHIVO .TXT CON LOS DATOS DE USUARIO
-					} catch (FileNotFoundException | UnsupportedEncodingException e) {
+						writer = new PrintWriter("usuario"+contador[0]+".txt", "UTF-8");				//CREAR UN ARCHIVO .TXT CON LOS DATOS DE USUARIO
+					} 
+					catch (FileNotFoundException | UnsupportedEncodingException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 					writer.println(mensaje);
 					writer.close();
+					contador[0]++;
+					System.out.println(contador[0]);
 			   }
+			   
 			});
 		btnEnviar.setBounds(229, 238, 89, 23);
 		contentPane.add(btnEnviar);
