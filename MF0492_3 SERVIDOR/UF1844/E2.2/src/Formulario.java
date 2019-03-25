@@ -165,14 +165,14 @@ public class Formulario extends JFrame {
 		contentPane.add(textArea);
 		
 		JButton btnEnviar = new JButton("ENVIAR");
-		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(		//PERMITE EL USO DE ENTER PARA ACTIVARLO
-                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false)),    
-                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, false),	
+		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(			//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false)),
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, false),
                 JComponent.WHEN_IN_FOCUSED_WINDOW);
-		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(		//PERMITE EL USO DE ENTER PARA ACTIVARLO
-                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),		
-                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),	
-                JComponent.WHEN_IN_FOCUSED_WINDOW);		
+		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(			//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),
+                JComponent.WHEN_IN_FOCUSED_WINDOW);
 		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnEnviar.setBackground(new Color(219, 112, 147));
 		btnEnviar.setForeground(new Color(255, 240, 245));
@@ -219,12 +219,14 @@ public class Formulario extends JFrame {
 						String documento= "usuario_"+contador+".txt";	//NOMBRE DEL DOCUMENTO NUEVO
 						
 						writer = new PrintWriter(documento, "UTF-8");	//CREAR UN ARCHIVO .TXT CON LOS DATOS DE USUARIO
-						JOptionPane.showMessageDialog(null, "Sus datos han sido registrados satisfactoriamente en el fichero: "+documento);
+						JOptionPane.showMessageDialog(null, "Sus datos han sido registrados en el fichero: usuario_"+contador+".txt");
 					}
 					catch (FileNotFoundException | UnsupportedEncodingException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+					writer.println(mensaje);   //ENVIA EL FORMULARIO
+					writer.close();
 					
 			   }
 			   
