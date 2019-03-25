@@ -10,10 +10,13 @@ import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.KeyStroke;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 
@@ -81,6 +84,14 @@ public class Acceso extends JFrame {
 		
 		
 		btnAceptar = new JButton("ACEPTAR");
+		btnAceptar.registerKeyboardAction(btnAceptar.getActionForKeyStroke(			//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false)),
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, false),
+                JComponent.WHEN_IN_FOCUSED_WINDOW);
+		btnAceptar.registerKeyboardAction(btnAceptar.getActionForKeyStroke(			//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),
+                JComponent.WHEN_IN_FOCUSED_WINDOW);
 		btnAceptar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAceptar.setForeground(new Color(255, 240, 245));
 		btnAceptar.setBackground(new Color(219, 112, 147));

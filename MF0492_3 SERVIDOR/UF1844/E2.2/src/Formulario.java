@@ -6,6 +6,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -164,6 +165,14 @@ public class Formulario extends JFrame {
 		contentPane.add(textArea);
 		
 		JButton btnEnviar = new JButton("ENVIAR");
+		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(		//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false)),    
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, false),	
+                JComponent.WHEN_IN_FOCUSED_WINDOW);
+		btnEnviar.registerKeyboardAction(btnEnviar.getActionForKeyStroke(		//PERMITE EL USO DE ENTER PARA ACTIVARLO
+                KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),		
+                KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),	
+                JComponent.WHEN_IN_FOCUSED_WINDOW);		
 		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnEnviar.setBackground(new Color(219, 112, 147));
 		btnEnviar.setForeground(new Color(255, 240, 245));
