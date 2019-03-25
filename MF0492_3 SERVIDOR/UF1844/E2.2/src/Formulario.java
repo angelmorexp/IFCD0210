@@ -65,8 +65,10 @@ public class Formulario extends JFrame {
 		setVisible(true);
 
 		//Creamos el panel
+		Border border = BorderFactory.createLineBorder(Color.black, 1);
 		contentPane =new JPanel();
 		contentPane.setBackground(new Color(255, 240, 245));
+		contentPane.setBorder(border);
 
 		//Indicamos su diseño
 		contentPane.setLayout(null);
@@ -154,7 +156,7 @@ public class Formulario extends JFrame {
 		contentPane.add(lblOtrosDatosDe);
 
 		JTextArea textArea = new JTextArea();
-		Border border = BorderFactory.createLineBorder(Color.black, 1);
+		
 		textArea.setBorder(border);
 		textArea.setForeground(new Color(219, 112, 147));
 		textArea.setBackground(Color.WHITE);
@@ -165,6 +167,7 @@ public class Formulario extends JFrame {
 		btnEnviar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnEnviar.setBackground(new Color(219, 112, 147));
 		btnEnviar.setForeground(new Color(255, 240, 245));
+		btnEnviar.setBorder(border);
 		btnEnviar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){
 				   String nombre= txtNoIndicado.getText();
@@ -193,7 +196,6 @@ public class Formulario extends JFrame {
 					}
 					String datos= textArea.getText();
 					String mensaje= " Nombre: "+nombre+"\n Apellidos: "+apellido+"\n Edad: "+edad+"\n Genero: "+genero+"\n Ocupación: "+ocupacion+"\n Otros datos: "+datos;
-					JOptionPane.showMessageDialog(null, mensaje ); //MOSTRAR LOS DATOS DEL FORMULARIO
 					PrintWriter writer = null;
 					
 					try {
@@ -208,13 +210,13 @@ public class Formulario extends JFrame {
 						String documento= "usuario_"+contador+".txt";	//NOMBRE DEL DOCUMENTO NUEVO
 						
 						writer = new PrintWriter(documento, "UTF-8");	//CREAR UN ARCHIVO .TXT CON LOS DATOS DE USUARIO
+						JOptionPane.showMessageDialog(null, "Sus datos han sido registrados satisfactoriamente en el fichero: "+documento);
 					}
 					catch (FileNotFoundException | UnsupportedEncodingException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					writer.println(mensaje);
-					writer.close();
+					
 			   }
 			   
 			});

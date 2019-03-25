@@ -3,12 +3,14 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
@@ -50,7 +52,8 @@ public class Acceso extends JFrame {
 		setBounds(100, 100, 323, 187);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 240, 245));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		Border border = BorderFactory.createLineBorder(Color.black, 1);
+		contentPane.setBorder(border);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setTitle("Acceso");
@@ -81,6 +84,7 @@ public class Acceso extends JFrame {
 		btnAceptar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAceptar.setForeground(new Color(255, 240, 245));
 		btnAceptar.setBackground(new Color(219, 112, 147));
+		btnAceptar.setBorder(border);
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
