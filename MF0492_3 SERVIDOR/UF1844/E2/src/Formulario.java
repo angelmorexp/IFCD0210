@@ -204,7 +204,7 @@ public class Formulario extends JFrame {
 						ocupacion= "Ni estudio ni trabajo";
 					}
 					String datos= textArea.getText();
-					String mensaje= " Nombre: "+nombre+"\n Apellidos: "+apellido+"\n Edad: "+edad+"\n Genero: "+genero+"\n Ocupación: "+ocupacion+"\n Otros datos: "+datos;
+					String mensaje= "Nombre: "+nombre+"\r\nApellidos: "+apellido+"\r\nEdad: "+edad+"\r\nGenero: "+genero+"\r\nOcupación: "+ocupacion+"\r\nOtros datos: "+datos;
 					PrintWriter writer = null;
 					
 					try {
@@ -219,7 +219,7 @@ public class Formulario extends JFrame {
 						String documento= "usuario_"+contador+".txt";	//NOMBRE DEL DOCUMENTO NUEVO
 						
 						writer = new PrintWriter(documento, "UTF-8");	//CREAR UN ARCHIVO .TXT CON LOS DATOS DE USUARIO
-						JOptionPane.showMessageDialog(null, "Sus datos han sido registrados en el fichero: usuario_"+contador+".txt");
+						JOptionPane.showMessageDialog(null, mensaje+"\r\nSus datos han sido registrados en el fichero: usuario_"+contador+".txt");
 					}
 					catch (FileNotFoundException | UnsupportedEncodingException e) {
 						// TODO Auto-generated catch block

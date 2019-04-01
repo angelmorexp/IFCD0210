@@ -92,6 +92,7 @@ public class Acceso extends JFrame {
                 KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true)),
                 KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0, true),
                 JComponent.WHEN_IN_FOCUSED_WINDOW);
+	
 		btnAceptar.setFont(new Font("Tahoma", Font.BOLD, 11));
 		btnAceptar.setForeground(new Color(255, 240, 245));
 		btnAceptar.setBackground(new Color(219, 112, 147));
