@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario de Ingreso</title>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript">
+
+function validarDatos() {
+	
+	var usuario = document.getElementById("usuarioreg");
+	var password = document.getElementById("passwordreg");
+	var password2 = document.getElementById("password2reg");
+	
+	if (usuario.value == ""){
+		alert("Debe introducir un nombre de usuario");
+		return false;
+	}
+
+	if (password.value == ""){
+		alert("Debe introducir una contraseña");
+		return false;
+	}
+	
+	if (password.value != password2.value){
+		alert("La contraseña no coincide");
+		return false;
+	}
+	else {
+		return true;
+		
+	}
+}
+
+
+</script>
+</head>
+<body>
+
+	<div>
+		
+		<img id="usericon" src="images/user.png">
+	
+		<span id="log">Login</span>
+		<span id="sign">Sign in</span>
+		
+		<form id="Login" action="Login" method="POST">
+
+			<label>Usuario</label>
+			<input type="text" name="usuariolog" id="usuariolog" value="usuario">
+			<label>Contraseña</label>
+			<input type="password" name="passwordlog" id="passwordlog" value="contraseña">
+			<input type="submit" value="Entrar" id="entrar">
+
+		</form>
+
+		<form id="Registro" action="Registro" method="POST" onsubmit="return validarDatos();">
+
+			<label>Usuario</label>
+			<input type="text" name="usuarioreg" id="usuarioreg" value="usuario" onchange="form.action='Check';">
+			<label>Contraseña</label>
+			<input type="password" name="passwordreg" id="passwordreg" value="contraseña">
+			<label>Repita Contraseña</label>
+			<input type="password" name="password2reg" id="password2reg" value="contraseña">
+			<input type="submit" value="Registrarse" id="registrarse">
+			<input type="submit" name="check" id="check">
+
+		</form>
+
+	</div>
+
+</body>
+</html>

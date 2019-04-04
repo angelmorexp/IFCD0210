@@ -1,0 +1,77 @@
+body {
+	background-image: url(../images/formulario.jpg);
+	background-size: cover;
+}
+div {
+	height: 330px;
+	width:450px;
+	margin:100px auto;
+	border: 2px solid #805251;
+	border-radius: 20px;
+	background: #805251;
+	background: -moz-linear-gradient(top, #805251 0%, #805251 33%, #fff9f9 33%, #fff9f9 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #805251), color-stop(33%, #805251), color-stop(33%, #fff9f9), color-stop(100%, #fff9f9));
+	background: -webkit-linear-gradient(top, #805251 0%, #805251 33%, #fff9f9 33%, #fff9f9 100%);
+	background: -o-linear-gradient(top, #805251 0%, #805251 33%, #fff9f9 33%, #fff9f9 100%);
+	background: -ms-linear-gradient(top, #805251 0%, #805251 33%, #fff9f9 33%, #fff9f9 100%);
+	background: linear-gradient(to bottom, #805251 0%, #805251 33%, #fff9f9 33%, #fff9f9 100%);
+}
+#usericon {
+	display: block;
+	width:100px;
+	height: 100px;
+	margin: auto;
+	margin-top: 10px;
+}
+span {
+	color: white;
+	font-size: 30px;
+	top: -40px;
+	position: relative;
+}
+#log {
+	left:-140px;
+}
+#sign {
+	left: 20px;
+}
+#Login {
+	float: left;
+}
+#Registro {
+	float: right;
+	position: relative;
+	top: -35px;
+}
+label{
+	display: block;
+	padding-left: 2px;
+	font-variant:  small-caps;
+}
+input {
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding-left: 8px;
+}
+form {
+	margin: 20px;
+}
+#entrar, #registrarse {
+	border: 1px solid #805251;
+	width: 100px;
+	height: 20px;
+	border-radius: 20px;
+	margin-top: 10px;
+	background-color: #805251;
+	color: white;
+	margin: auto;
+	padding: 0px;
+}
+#registrarse {
+	
+}
+#entrar {
+	
+}
+	
