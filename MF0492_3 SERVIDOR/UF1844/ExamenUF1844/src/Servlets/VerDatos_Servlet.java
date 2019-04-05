@@ -1,13 +1,14 @@
 package Servlets;
 
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.io.PrintWriter;
-
-
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Collections;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,16 +17,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Registro
+ * Servlet implementation class VerDatos_Servlet
  */
-@WebServlet("/Registro")
-public class Registro extends HttpServlet {
+@WebServlet("/VerDatos_Servlet")
+public class VerDatos_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Registro() {
+    public VerDatos_Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,47 +43,28 @@ public class Registro extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String usuario= request.getParameter("usuarioreg");
-		String contraseña= request.getParameter("passwordreg");
+		// TODO Auto-generated method stub
+		String usuario= request.getParameter("usuariolog");
+		String contraseña= request.getParameter("passwordlog");
+		
 		Boolean exists= false;
 		File tempFile = new File("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");		//VARIABLE DEL NOMBRE DEL ARCHIVO
 		exists = tempFile.exists();
 		
 		if (exists) {
-			PrintWriter out = response.getWriter();
 			
-			out.println("<script type=\"text/javascript\">");
-			out.println("alert('El nombre de usuario ya existe');");
-			out.println("location='index.jsp';");
-			out.println("</script>");
+			request.getRequestDispatcher("Datos.jsp").forward(request, response);
 			
 		}
 		else {
-			String mensaje = usuario+"\r\n"+contraseña;
+			PrintWriter out = response.getWriter();
 			
-			response.setContentType("text/html");
-
-		    try{
-		        FileWriter writer = new FileWriter("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");
-		        writer.write(mensaje);
-		        writer.close();
-		    }catch(Exception ex){
-		        ex.printStackTrace();
-		    }
-
-		    response.getWriter().write(mensaje);
-		    
-			System.out.println("Bienvenido "+usuario);
-			request.setAttribute("usuarioSign", usuario);
-			request.setAttribute("contraseñaSign", contraseña);
-			
-			request.getRequestDispatcher("Registro.jsp").forward(request, response);
-			
-			 
+			out.println("<script type=\"text/javascript\">");
+			out.println("alert('Este nombre de usuario no existe');");
+			out.println("location='index.jsp';");
+			out.println("</script>");
 		
 		}
-		
-		
-	}
 
+	}
 }

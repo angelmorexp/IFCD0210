@@ -1,13 +1,10 @@
 package Servlets;
 
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
 import java.io.PrintWriter;
-
-
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,16 +13,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Registro
+ * Servlet implementation class Datos_Servlet
  */
-@WebServlet("/Registro")
-public class Registro extends HttpServlet {
+@WebServlet("/Datos_Servlet")
+public class Datos_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Registro() {
+    public Datos_Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,23 +39,27 @@ public class Registro extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		String usuario= request.getParameter("usuarioreg");
 		String contraseña= request.getParameter("passwordreg");
-		Boolean exists= false;
-		File tempFile = new File("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");		//VARIABLE DEL NOMBRE DEL ARCHIVO
-		exists = tempFile.exists();
-		
-		if (exists) {
-			PrintWriter out = response.getWriter();
-			
-			out.println("<script type=\"text/javascript\">");
-			out.println("alert('El nombre de usuario ya existe');");
-			out.println("location='index.jsp';");
-			out.println("</script>");
-			
+		String nombre= request.getParameter("nombre");
+		String apellidos= request.getParameter("apellidos");
+		String genero= request.getParameter("genero");
+		if(genero== null) {
+			genero="No indicado";
 		}
-		else {
-			String mensaje = usuario+"\r\n"+contraseña;
+		String[] ocupacionDatos = request.getParameterValues("ocupacion");
+		if (ocupacionDatos == null) {
+			ocupacionDatos[0] = "Ni estudio ni trabajo";
+		}
+		String ocupacion = String.join(",", ocupacionDatos);
+		if (ocupacion == null) {
+			ocupacion = "Ni estudio ni trabajo";
+		}
+		String otros = request.getParameter("mensaje");
+		
+			
+			String mensaje = usuario+"<br>"+contraseña+"<br>"+nombre+"<br>"+apellidos+"<br>"+genero+"<br>"+ocupacion+"<br>"+otros;
 			
 			response.setContentType("text/html");
 
@@ -69,20 +70,8 @@ public class Registro extends HttpServlet {
 		    }catch(Exception ex){
 		        ex.printStackTrace();
 		    }
-
-		    response.getWriter().write(mensaje);
-		    
-			System.out.println("Bienvenido "+usuario);
-			request.setAttribute("usuarioSign", usuario);
-			request.setAttribute("contraseñaSign", contraseña);
 			
-			request.getRequestDispatcher("Registro.jsp").forward(request, response);
-			
-			 
-		
-		}
-		
-		
+			request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }

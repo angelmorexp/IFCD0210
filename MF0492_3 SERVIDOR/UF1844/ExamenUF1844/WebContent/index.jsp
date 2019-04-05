@@ -36,11 +36,12 @@ function validarDatos() {
 }
 function check() {
 	var usuario = document.getElementById("usuarioreg").value;
-	var direccion = "";
+	var direccion = "'http://localhost:8080/ExamenUF1844/usuarios/"+usuario+".html'" ;
 	
 	$.ajax({
 		
-        url: "file:///C:/Users/aula1/eclipse-workspace/ExamenUF1844/usuario.txt" ,
+        url: 'http://localhost:8080/ExamenUF1844/usuarios/'+usuario+'.html',
+        async: false ,
         
         error: function()
         {
@@ -57,9 +58,7 @@ function check() {
             document.getElementById('comprobar').innerHTML = mensaje;
         }
     });
-	
-	document.getElementById('test').innerHTML = usuario;
-	document.getElementById('test1').innerHTML = url;
+	document.getElementById('test').innerHTML = direccion;
 }
 
 </script>
@@ -67,22 +66,19 @@ function check() {
 <body>
 	
 	<div>
-	
-	<span id="test"></span>
-	<span id="test1"></span>
-	
+	<label id="test"></label>
 		<img id="usericon" src="images/user.png">
 	
 		<span id="log">Login</span>
 		<span id="sign">Sign in</span>
 		
-		<form id="Login" action="Login" method="POST">
+		<form id="Login" action="VerDatos_Servlet" method="POST">
 
 			<label>Usuario</label>
 			<input type="text" name="usuariolog" id="usuariolog" value="usuario">
 			<label>Contraseña</label>
 			<input type="password" name="passwordlog" id="passwordlog" value="contraseña">
-			<input type="submit" value="Entrar" id="entrar">
+			<input type="submit" value="Entrar" id="entrar" onclick="this.form.action='VerDatos_Servlet';">
 
 		</form>
 

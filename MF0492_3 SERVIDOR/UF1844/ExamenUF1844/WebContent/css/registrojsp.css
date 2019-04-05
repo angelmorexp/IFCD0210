@@ -1,0 +1,110 @@
+body {
+	background-image: url(../images/formulario.jpg);
+	background-size: cover;
+}
+div {
+	height: 400px;
+	width:450px;
+	margin:50px auto;
+	border: 2px solid #805251;
+	border-radius: 20px;
+	background: #805251;
+	background: -moz-linear-gradient(top, #805251 0%, #805251 25%, #fff9f9 25%, #fff9f9 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #805251), color-stop(25%, #805251), color-stop(25%, #fff9f9), color-stop(100%, #fff9f9));
+	background: -webkit-linear-gradient(top, #805251 0%, #805251 25%, #fff9f9 25%, #fff9f9 100%);
+	background: -o-linear-gradient(top, #805251 0%, #805251 25%, #fff9f9 25%, #fff9f9 100%);
+	background: -ms-linear-gradient(top, #805251 0%, #805251 25%, #fff9f9 25%, #fff9f9 100%);
+	background: linear-gradient(to bottom, #805251 0%, #805251 25%, #fff9f9 25%, #fff9f9 100%);
+}
+h1 {
+	text-align: center;
+	color: white;
+	margin-top: 20px;
+}
+label{
+	display: block;
+	padding-left: 2px;
+	font-variant:  small-caps;
+}
+input {
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding-left: 8px;
+	width: 150px;
+}
+form {
+	margin: 20px;
+}
+#ojo {
+	position: relative;
+	top: -25px;
+	left: 170px;
+ 	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+	height: 20px;
+	width: 20px;
+	background-image: url("../images/ojo.png");
+	background-size: 20px 10px;
+}
+input {
+	width: 150px;
+}
+label {
+	font-weight: bold;
+}
+#user, #pass, #datos1, #datos2 {
+	width:200px;
+	margin:0px;
+	border: none;
+	border-radius: 0px;
+	background: none;
+}
+#user, #pass {
+	height: 50px;
+}
+#user {
+	float: left;
+}
+#pass {
+	float: right;
+}
+#datos1, datos2 {
+	height: 200px;
+}
+#datos1{
+	float: left;
+}
+#datos2{
+	float: right;
+}
+.gen {
+	width: 10px;
+	margin: 0px 10px 0px 0px;
+	display: inline-block;
+}
+#ocupacion , #otros {
+	margin-top: 20px;
+}
+#enviar {
+	border: 1px solid #805251;
+	width: 100px;
+	height: 20px;
+	border-radius: 20px;
+	margin-top: 10px;
+	background-color: #805251;
+	color: white;
+	margin: auto;
+	padding: 0px;
+}
+#editar {
+	background-color: #805251;
+	color: white;
+}
+#secret {
+	display: none;
+}
+#otros, textarea {
+	margin-top: 0px;
+}
