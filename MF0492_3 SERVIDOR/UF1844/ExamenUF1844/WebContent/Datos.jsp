@@ -57,11 +57,11 @@ for (var i=0; i < element.length; i++) {
 		<form id="Formulario" action="Datos_Servlet" method="POST">
 			<div id="user">
 			<label>Usuario</label>
-			<input type="text" name="usuarioreg" id="usuarioreg" value=<%= request.getAttribute("usuarioSign") %> readonly >
+			<input type="text" name="usuarioreg" id="usuarioreg" value=<%= request.getAttribute("usuarioLog") %> readonly >
 			</div>
 			<div id="pass">
 			<label>Contraseña</label>
-			<input type="password" name="passwordreg" id="passwordreg" value=<%= request.getAttribute("contraseñaSign") %> readonly>
+			<input type="password" name="passwordreg" id="passwordreg" value=<%= request.getAttribute("contraseñaLog") %> readonly>
 			<button id="ojo" type="button" onmouseover="mostrar();" onmouseout="ocultar();"></button>
 			</div>
 			<div id="datos1">

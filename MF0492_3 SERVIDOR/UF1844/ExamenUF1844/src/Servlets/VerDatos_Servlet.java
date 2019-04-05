@@ -53,6 +53,9 @@ public class VerDatos_Servlet extends HttpServlet {
 		
 		if (exists) {
 			
+			request.setAttribute("usuarioLog", usuario);
+			request.setAttribute("contraseñaLog", contraseña);
+			
 			request.getRequestDispatcher("Datos.jsp").forward(request, response);
 			
 		}
