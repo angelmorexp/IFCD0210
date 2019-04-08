@@ -36,11 +36,11 @@ function validarDatos() {
 }
 function check() {
 	var usuario = document.getElementById("usuarioreg").value;
-	var direccion = "'http://localhost:8080/ExamenUF1844/usuarios/"+usuario+".html'" ;
+	var direccion = "'http://localhost:8080/ExamenUF1844/usuarios/"+usuario+".txt'" ;
 	
 	$.ajax({
 		
-        url: 'http://localhost:8080/ExamenUF1844/usuarios/'+usuario+'.html',
+        url: 'http://localhost:8080/ExamenUF1844/usuarios/'+usuario+'.txt',
         async: false ,
         
         error: function()
@@ -53,7 +53,7 @@ function check() {
         },
         success: function()
         {
-            var mensaje= "Nombre de usuario no disponible";
+            var mensaje= "Esta utilidad no funciona";
             return mensaje;
             document.getElementById('comprobar').innerHTML = mensaje;
         }
@@ -66,7 +66,6 @@ function check() {
 <body>
 	
 	<div>
-	<label id="test"></label>
 		<img id="usericon" src="images/user.png">
 	
 		<span id="log">Login</span>

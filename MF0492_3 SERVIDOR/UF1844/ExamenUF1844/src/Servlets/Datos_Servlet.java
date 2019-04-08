@@ -59,12 +59,12 @@ public class Datos_Servlet extends HttpServlet {
 		String otros = request.getParameter("mensaje");
 		
 			
-			String mensaje = usuario+"<br>"+contraseña+"<br>"+nombre+"<br>"+apellidos+"<br>"+genero+"<br>"+ocupacion+"<br>"+otros;
+			String mensaje = usuario+"\r\n"+contraseña+"\r\n"+nombre+"\r\n"+apellidos+"\r\n"+genero+"\r\n"+ocupacion+"\r\n"+otros;
 			
 			response.setContentType("text/html");
 
 		    try{
-		        FileWriter writer = new FileWriter("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");
+		        FileWriter writer = new FileWriter("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".txt");
 		        writer.write(mensaje);
 		        writer.close();
 		    }catch(Exception ex){

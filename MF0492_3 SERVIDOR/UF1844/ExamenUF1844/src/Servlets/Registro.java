@@ -45,7 +45,7 @@ public class Registro extends HttpServlet {
 		String usuario= request.getParameter("usuarioreg");
 		String contraseña= request.getParameter("passwordreg");
 		Boolean exists= false;
-		File tempFile = new File("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");		//VARIABLE DEL NOMBRE DEL ARCHIVO
+		File tempFile = new File("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".txt");		//VARIABLE DEL NOMBRE DEL ARCHIVO
 		exists = tempFile.exists();
 		
 		if (exists) {
@@ -63,7 +63,7 @@ public class Registro extends HttpServlet {
 			response.setContentType("text/html");
 
 		    try{
-		        FileWriter writer = new FileWriter("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".html");
+		        FileWriter writer = new FileWriter("C:/Users/aula1/eclipse-workspace/ExamenUF1844/WebContent/usuarios/"+usuario+".txt");
 		        writer.write(mensaje);
 		        writer.close();
 		    }catch(Exception ex){
@@ -78,8 +78,6 @@ public class Registro extends HttpServlet {
 			
 			request.getRequestDispatcher("Registro.jsp").forward(request, response);
 			
-			 
-		
 		}
 		
 		

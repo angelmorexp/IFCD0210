@@ -1,0 +1,7 @@
+usuario1
+123
+Angel
+Morales
+NoBinario
+Trabajador, 
+Test 2

@@ -66,21 +66,21 @@ for (var i=0; i < element.length; i++) {
 			</div>
 			<div id="datos1">
 			<label>Nombre</label>
-			<input type="text" name="nombre" id="nombre" value="" readonly>
+			<input type="text" name="nombre" id="nombre" value=<%= request.getAttribute("nombre") %> readonly>
 			<label>Apellidos</label>
-			<input type="text" name="apellidos" id="apellidos" value="" readonly>
+			<input type="text" name="apellidos" id="apellidos" value=<%= request.getAttribute("apellido") %> readonly>
 			<label id="gene">Genero</label>
-			<input class="gen" type="radio" name="genero" value="Hombre" >Hombre<br>
-			<input class="gen" type="radio" name="genero" value="Mujer" >Mujer<br>
-			<input class="gen" type="radio" name="genero" value="NoBinario" >No Binario<br>
+			<input class="gen" type="radio" name="genero" value="Hombre" <%= request.getAttribute("genHom") %> >Hombre<br>
+			<input class="gen" type="radio" name="genero" value="Mujer" <%= request.getAttribute("genMuj") %>>Mujer<br>
+			<input class="gen" type="radio" name="genero" value="NoBinario" <%= request.getAttribute("genNo") %>>No Binario<br>
 			</div>
 			<div id="datos2">
 			<label id="ocupacion">Ocupación</label>
-			<input class="gen" type="checkbox" name="ocupacion" value="Estudiante" >Estudiante<br>
-			<input class="gen" type="checkbox" name="ocupacion" value="Trabajador" >Trabajador<br>
+			<input class="gen" type="checkbox" name="ocupacion" value="Estudiante" <%= request.getAttribute("est") %> >Estudiante<br>
+			<input class="gen" type="checkbox" name="ocupacion" value="Trabajador" <%= request.getAttribute("trab") %> >Trabajador<br>
 				<input id="secret" class="gen" type="checkbox" name="ocupacion" value=" " checked readonly><br>
 			<label id="otros">Otros datos</label>
-			<textarea id="textbox" name="mensaje" rows="7" cols="20" readonly >"Introduzca otros datos aquí"</textarea>
+			<textarea id="textbox" name="mensaje" rows="7" cols="20" readonly ><%= request.getAttribute("otros") %></textarea>
 			</div>
 			
 			<button type="button" onclick="editar();">Editar</button>
