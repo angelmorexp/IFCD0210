@@ -1,0 +1,63 @@
+body {
+	background: url(../images/bg.jpg) ;
+}
+#content {
+	margin: auto;
+	padding: 10px;
+	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 1280px;
+	height: 400px;
+	text-align: center;
+}
+#new {
+	margin: auto;
+	background: white;
+	width: 1300px;
+}
+#content th, #new th {
+	padding: 13px;
+	border: 1px solid black;
+	background: #113f84;
+	color: white;
+}
+#content td, #new td{
+	padding: 2px 5px;
+	border-bottom: 1px solid black;
+}
+#new td{
+	border-bottom: none;
+}
+.nom, .ape, .otr {
+	width: 150px;
+}
+#id {
+	width: 30px;
+	}
+h2 {
+	font-size: 20px;
+	width: 1300px;
+	margin: auto;
+	text-align: center;
+	background: #b2cdf7;
+}
+input {
+	width: 100%;
+}
+#nuevoUser {
+	visibility: visible;
+	height: 80px;
+}
+#content .del , #content .mod {
+	border-bottom: none;
+}
+.del button {
+	background: #FF9390;
+}
+.mod button {
+	background: #90B8FF;
+}
+#enviar {
+	background: #BCFF90;
+}
