@@ -1,0 +1,92 @@
+body {
+	background: url(../images/bg.jpg) ;
+}
+#content {
+	margin: auto;
+	margin-top: 10vh;
+	padding: 10px;
+	background: white;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 1280px;
+	height: 400px;
+	text-align: center;
+}
+#new {
+	margin: auto;
+	margin-top: 30vh;
+	background: white;
+	width: 1300px;
+}
+#content th, #new th {
+	padding: 13px;
+	border: 1px solid black;
+	background: #113f84;
+	color: white;
+}
+#content td, #new td{
+	padding: 2px 5px;
+	border-bottom: 1px solid black;
+}
+#new td{
+	border-bottom: none;
+}
+.nom, .ape, .otr {
+	width: 150px;
+}
+#id {
+	width: 30px;
+	}
+h2 {
+	font-size: 20px;
+	width: 1300px;
+	margin: auto;
+	text-align: center;
+	background: #b2cdf7;
+}
+input {
+	width: 100%;
+}
+#nuevoUser {
+	visibility: visible;
+	height: 80px;
+}
+#content .del , #content .mod {
+	border-bottom: none;
+}
+.del a {
+	background: #FF9390;
+	text-decoration: none;
+	color: black;
+}
+.mod a {
+	background: #90B8FF;
+	text-decoration: none;
+	color: black;
+}
+#enviar {
+	background: #BCFF90;
+}
+#nuevoUser #volver{
+	margin: 0px;
+	padding: 14px 44px;
+	border: none;
+	background: green;
+	color: white;
+	text-decoration: none;
+}
+#nuevoUser #volver:hover {
+	background: white;
+	color: black;
+}
+#nuevoUser #esp {
+	padding: 0px 0px;
+	background: red;
+}
+#add {
+	text-decoration: none;
+	color: black;
+}
+#add:hover {
+	color: white;
+}
