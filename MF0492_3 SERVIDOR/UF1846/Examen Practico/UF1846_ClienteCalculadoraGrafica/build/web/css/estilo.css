@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-may-2019, 17:46:33
+    Author     : aula1
+*/
+
+h1 {
+    text-align: center;
+}
+#cuerpo {
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    background: grey;
+    
+    
+}
+#pantalla {
+    border: 1px solid black;
+    background: white;
+    margin: 20px auto;
+    width: 280px;
+    height: 60px;
+    font-size: 42px;
+    text-align: right;
+}
+#numeros {
+    border: 1px solid black;
+    background: white;
+    margin: 0px 18px;
+    width: 160px;
+    height: 280px;
+    float: left;
+}
+#numeros table #cero {
+    width: 150px;
+}
+#operaciones {
+    border: 1px solid black;
+    background: white;
+    margin: 0px 18px 0px 0px;
+    width: 80px;
+    height: 280px;
+    float: right;
+}
+#numeros button{
+    width: 49px;
+    height: 65px;
+    padding: 0px;
+    font-size: 42px;
+}
+#operaciones button {
+    width:75px;
+    height: 51px;
+    padding: 0px;
+    font-size: 42px;
+}
+#numeros #borrar {
+    width: 80px;
+}
